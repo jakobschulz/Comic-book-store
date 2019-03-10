@@ -21,10 +21,13 @@ comics = [Comic("Super Dude", "image", int(8)),
           Comic("Water Woman", "image", int(3))]
 
 
-
-
-
-
+#pages
+#index page
+@route("/")
+@view("index")
+def index():
+    #need this function to attach the decorators above
+    pass
 
 
 
