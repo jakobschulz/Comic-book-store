@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	% include('shared/header.html')
+	% include('shared/navbar.html')
+	
+	<body class = "black"><!-- Background colour -->
+		<div class="row indigo darken-4"> <!-- card colour -->
+			<div class="col s12 center">check-in</div>
+			% for comics in comic_list:
+			<div class="row">
+			<div class="col s3">
+			<div class="col s9">
+				<div class="card amber lighten-1">
+				<div class="card-content black-text">
+					<span class="card-title">{{comics.name}}</span>
+					<p><img src="/picture/{{comics.image}}"> <br>
+					{{comics.stock}}</p>
+					
+				</div>
+				</div>
+			</div>
+			</div>
+		</div>
+			%end
+
+	</body>
+</html>
