@@ -17,8 +17,8 @@ class Comic:
         
 #test data
 comics = [Comic("Super Dude", "superdude.png", int(8)),
-          Comic("Lizard Man", "waterwoman.jpg", int(12)),
-          Comic("Water Woman", "lizardman.jpg", int(3))]
+          Comic("Lizard Man", "lizardman.jpg", int(12)),
+          Comic("Water Woman", "waterwoman.jpg", int(3))]
 
 
 #pages

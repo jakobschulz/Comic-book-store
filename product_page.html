@@ -3,24 +3,20 @@
 	% include('shared/header.html')
 	% include('shared/navbar.html')
 	
-	<body class = "black"><!-- Background colour -->
-		<div class="row indigo darken-4"> <!-- card colour -->
-			<div class="col s12 center">check-in</div>
+	<body background="/picture/galaxy1.jpg" style = "width:1920px;height:1080px;"      "class = "row black"><!-- Background colour -->
+			<div class="col s12 center"></div>
 			% for comics in comic_list:
 			<div class="row">
-			<div class="col s3">
-			<div class="col s9">
-				<div class="card amber lighten-1">
+			<div class="col s5">
+			<h3 class ="header white-text">{{comics.name}}</h3>
+				<div class="card light-blue darken-4"> <!-- box colour -->
 				<div class="card-content black-text">
-					<span class="card-title">{{comics.name}}</span>
-					<p><img src="/picture/{{comics.image}}"> <br>
-					{{comics.stock}}</p>
-					
+					<p><img src="/picture/{{comics.image}}" style = "width:300px;height:400px;"> <br>
+					stock : {{comics.stock}}</p>
 				</div>
 				</div>
 			</div>
 			</div>
-		</div>
 			%end
 
 	</body>
