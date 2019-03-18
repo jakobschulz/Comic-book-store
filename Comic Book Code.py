@@ -1,7 +1,7 @@
 #Comic book store website.
 #Cosmo's Comics
 
-from bottle import run, route, view, get, post, request
+from bottle import run, route, view, get, post, request, static_file
 from itertools import count
 
 
@@ -16,9 +16,9 @@ class Comic:
     
         
 #test data
-comics = [Comic("Super Dude", "image", int(8)),
-          Comic("Lizard Man", "image", int(12)),
-          Comic("Water Woman", "image", int(3))]
+comics = [Comic("Super Dude", "superdude.png", int(8)),
+          Comic("Lizard Man", "lizardman.jpg", int(12)),
+          Comic("Water Woman", "waterwoman.jpg", int(3))]
 
 
 #pages
@@ -30,6 +30,23 @@ def index():
     pass
 
 
+@route('/product_page')
+@view('product_page')
+def check_in():
+    data = dict (comic_list = comics)
+    return data
+
+
+
+
+
+
+
+
+
+@route("/picture/<filename>")
+def serve_picture(filename):
+    return static_file(filename, root ="./images")
 
 
 
