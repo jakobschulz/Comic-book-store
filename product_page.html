@@ -3,16 +3,17 @@
 	% include('shared/header.html')
 	% include('shared/navbar.html')
 	
-	<body background="/picture/galaxy1.jpg" style = "width:1920px;height:1080px;"      "class = "row black"><!-- Background colour -->
+	<body background="/picture/galaxy-blue.jpg" style = "width:1920px;height:1080px;" class = "row black"><!-- Background colour -->
 			<div class="col s12 center"></div>
 			% for comics in comic_list:
 			<div class="row">
-			<div class="col s5">
+			<div class="col s4>
 			<h3 class ="header white-text">{{comics.name}}</h3>
 				<div class="card light-blue darken-4"> <!-- box colour -->
-				<div class="card-content black-text">
+				<div class="card-content white-text">
 					<p><img src="/picture/{{comics.image}}" style = "width:300px;height:400px;"> <br>
-					stock : {{comics.stock}}</p>
+					Stock : {{comics.stock}}</p>
+					<button class="btn waves-effect waves-light light-blue" type="submit" name="action">Purchase</button>
 				</div>
 				</div>
 			</div>
