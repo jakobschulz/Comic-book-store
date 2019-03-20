@@ -32,9 +32,13 @@ def index():
 
 @route('/product_page')
 @view('product_page')
-def check_in():
+def product_page():
     data = dict (comic_list = comics)
     return data
+
+@route('/purchase_page')
+@view('purchase_page')
+
 
 
 

@@ -7,7 +7,3 @@ Ver1.0
 Ver1.1
 
   In version 1.1 I set up my index, header and navbar html pages.
-
-Ver1.2
-
-  In version 1.2 I set up my product page and made my page the colours I desired.
