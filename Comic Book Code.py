@@ -12,7 +12,7 @@ class Comic:
         self.id = next(self._ids)
         self.name = name
         self.image = image
-        self. stock = stock
+        self.stock = stock
     
         
 #test data
@@ -36,11 +36,17 @@ def product_page():
     data = dict (comic_list = comics)
     return data
 
-@route('/purchase_page')
+@route('/purchase_page/<comic_id>')
 @view('purchase_page')
-
-
-
+def purchase_page(comic_id):
+    comic_id = int(comic_id)
+    found_comic = None
+    for comic in comics:
+        if comic.id == comic_id:
+            found_comic  = comic
+    data = dict (comic = found_comic)
+    found_comic.stock = found_comic.stock - 1
+    return data
 
 
 
