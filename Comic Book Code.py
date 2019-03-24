@@ -45,7 +45,10 @@ def purchase_page(comic_id):
         if comic.id == comic_id:
             found_comic  = comic
     data = dict (comic = found_comic)
-    found_comic.stock = found_comic.stock - 1
+    if comic.stock > 0:
+        found_comic.stock = found_comic.stock - 1
+    else:
+        found_comic.stock = found_comic.stock
     return data
 
 
