@@ -1,14 +1,14 @@
 #Comic book store website.
 #Cosmo's Comics
 
-from bottle import run, route, view, get, post, request, static_file
+from bottle import run, route, view, get, post, request, static_file  
 from itertools import count
 
 
 class Comic:
     _ids = count(0)
     
-    def __init__(self, name, image, stock):
+    def __init__(self, name, image, stock):  #makes these variables for each comic
         self.id = next(self._ids)
         self.name = name
         self.image = image
@@ -41,26 +41,18 @@ def product_page():
 def purchase_page(comic_id):
     comic_id = int(comic_id)
     found_comic = None
-    for comic in comics:
+    for comic in comics: 
         if comic.id == comic_id:
             found_comic  = comic
     data = dict (comic = found_comic)
-    if comic.stock > 0:
-        found_comic.stock = found_comic.stock - 1
-    else:
-        found_comic.stock = found_comic.stock
-    return data
-
-
-
-
+    found_comic.stock = found_comic.stock - 1   #minus 1 from the amount of comics in stock
+    return data 
 
 
 
 @route("/picture/<filename>")
-def serve_picture(filename):
+def serve_picture(filename):   #need this for images to work on my website
     return static_file(filename, root ="./images")
-
 
 
 
