@@ -3,17 +3,17 @@
 	% include('shared/header.html')
 	% include('shared/navbar.html')
 	
-	<body background="/picture/galaxy-blue.jpg" style = "width:1920px;height:1080px;" class = "row black"><!-- Background colour -->
+	<body background="/picture/galaxy-blue.jpg" style = "width:1920px;height:1080px;" class = "row black"><!-- Background colour / Picture -->
 			<div class="col s12 center"></div>
-			% for comics in comic_list:
+			% for comics in comic_list:       #<!-- does this for each comic -->
 			<div class="row">
 			<div class="col s4>
 			<h3 class ="header white-text">{{comics.name}}</h3>
-				<div class="card light-blue darken-4"> <!-- box colour -->
-				<div class="card-content white-text">
+				<div class="card light-blue darken-4"> <!-- declearing it is a card and setting its colour -->
+				<div class="card-content white-text"> <!-- Making the text white-->
 					<p><img src="/picture/{{comics.image}}" style = "width:300px;height:400px;"> <br>
 					Stock : {{comics.stock}}</p>
-					%if comics.stock > 0:
+					%if comics.stock > 0:  #<!-- Allows the user to purchase comics when there is stock available -->
 						<a href = "/purchase_page/{{comics.id}}" ><button class="btn waves-effect waves-light light-blue" type="submit" name="action">Purchase</button> </a>
 					%else:
 						<a href = "#" ><button class="btn waves-effect waves-light disabled" type="submit" name="action">Out of Stock</button> </a>
