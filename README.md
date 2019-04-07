@@ -10,4 +10,8 @@ Ver1.1
 
 Ver1.2
 
-  In version 1.2 I set up my product page and made my page the colours I desired.
+In version 1.2 I set up my product page and made my page the colours I desired.
+
+Ver1.3
+
+In version 1.3 I set up my puchase page and changed the background of my website to pictures.
